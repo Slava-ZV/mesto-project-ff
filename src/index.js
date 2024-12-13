@@ -72,7 +72,7 @@ const formNewCard = forms["new-place"],
   cardName = formNewCard.querySelector(".popup__input_type_card-name"),
   cardUrl = formNewCard.querySelector(".popup__input_type_url");
 
-const formAddCard = (cardName, cardUrl) => {
+const AddFormCard = (cardName, cardUrl) => {
   cardContainer.prepend(
     createCard({
       name: cardName.value,
@@ -87,7 +87,7 @@ const formAddCard = (cardName, cardUrl) => {
 
 formNewCard.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  formAddCard(cardName, cardUrl);
+  AddFormCard(cardName, cardUrl);
   closeModal(newCardPopup);
 });
 
